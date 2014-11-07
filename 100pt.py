@@ -127,7 +127,7 @@ class MyApp:
             didWeHit = self.collisionDetect()
             # Use the value of didWeHit to create an if statement
             # that determines whether to run drawpad.after(1,self.animate) or not
-            if didWehit == True:
+            if didWeHit == True:
                 direction = 0
             else:
                 drawpad.after(1,self.animate)
@@ -138,7 +138,7 @@ class MyApp:
                 global player
                 x1,y1,x2,y2 = drawpad.coords(player)
                 tx1,ty1,tx2,ty2 = drawpad.coords(target)
-                if (x1 > tx1 and x2 < ty2) and (y1 >ty2 and y2 < ty2) :
+                if (x1 > tx1 and x2 < tx2) and (y1 >ty1 and y2 < ty2) :
                     drawpad.itemconfig(target, fill = "red")
                     return True
                 # Get the co-ordinates of our player AND our target
